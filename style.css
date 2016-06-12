@@ -1,0 +1,39 @@
+h1 {
+	text-align: center;
+}
+
+div {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input {
+	 width: 100%;
+}
+
+.inline {
+	display: inline-block;
+	margin: 1em;
+}
+
+.coin {
+	margin: 1em 2em;
+}
+
+.coin p {
+	font-size: 24px;
+}
+
+.box {
+	border: 1px solid black;
+	width: 50%;
+}
+
+.number {
+	font-size: 20px;
+}
+
+#cost-input {
+	margin: 1em 2em;
+}

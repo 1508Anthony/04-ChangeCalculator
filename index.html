@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<title>Change Calculator!</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<h1>Change Calculator!</h1>
+
+<div class="box" id="input">
+	<form>
+		<div id="user-input">
+			<div class="inline">
+				<p>How much is due for the sale?</p>
+				<input type="text" id="cost">
+			</div>
+			<div class="inline">
+				<p>How much has the customer given you?</p>
+				<input type="text" id="payment">
+			</div>
+		</div>
+		<div id="calculate">
+			<button type="button">CALCULATE</button>
+		</div>
+	</form>
+</div>
+
+<div class="box" id="dollar-output">
+	<div class="dollar coin">
+		<p>Dollars</p>
+		<div class="number" id="dollars">0</div>
+	</div>
+</div>
+
+<div class="box" id="coin-output">
+	<div class="inline coin quarters">
+		<p>Quarters</p>
+		<div class="number" id="quarters">0</div>
+	</div>
+	<div class="inline coin quarters">
+		<p>Dimes</p>
+		<div class="number" id="dimes">0</div>
+	</div>
+	<div class="inline coin dimes">
+		<p>Nickels</p>
+		<div class="number" id="nickels">0</div>
+	</div>
+	<div class="inline coin pennies">
+		<p>Pennies</p>
+		<div class="number" id="pennies">0</div>
+	</div>
+</div>
+
+</body>
+
+</html>
