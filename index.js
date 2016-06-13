@@ -1,38 +1,57 @@
 $(function() {
-	$("button").click(function() {
-		// get the values input by the users
-		var cost = $("#cost").val();
-		var payment = $("#payment").val();
+	$("button").click(function(){
+		var cost = $('#cost').val();
+		var moneyGiven =  $('#payment').val();
 
-		// get the difference - in cents
-		// this is the change to be returned
-		// -- using Math.abs in case we get negative values or bad input
-		var diff = 100 * Math.abs(payment - cost);
 
-		// calculate the number of dollars and the change leftover
-		var dollars = Math.floor(diff / 100);
-		var change = diff % 100; // use modulo to get the change
+		cost = cost*100;
+		moneyGiven = moneyGiven*100; //now all is in cents
 
-		// do the same for quarters
-		var quarters = Math.floor(change / 25);
-		change = change % 25;
+		var change = moneyGiven-cost;
+		var dollars = Math.floor(change/100);
 
-		// and for dimes
-		var dimes = Math.floor(change / 10);
-		change = change % 10;
 
-		// and for nickels
-		var nickels = Math.floor(change / 5);
-		change = change % 5;
+		change = change%100;
+		// change = change - 100 * dollars;
 
-		// and for pennies - it is whatever is left over
-		var pennies = Math.round(change); // round for floating point inaccuracy
+		var quarters = Math.floor(change/25);
+		change = change%25;
 
-		// now set all the outputs
-		$("#dollars").text(dollars);
-		$("#quarters").text(quarters);
-		$("#dimes").text(dimes);
-		$("#nickels").text(nickels);
-		$("#pennies").text(pennies);
-	});
+		var dimes = Math.floor(change/10);
+		change = change%10;
+
+		var nickels = Math.floor(change/5);
+		change = change%5;
+
+		var pennies = change;
+
+		
+		$('#dollars').text(dollars);
+
+		$('#quarters').text(quarters);
+
+		$('#dimes').text(dimes);
+
+		$('#nickels').text(nickels);
+
+		$('#pennies').text(pennies);
+
+
+
+
+	})
 });
+
+// var myFunction = function() {
+
+// };
+
+// $(myFunction())
+
+// var myClickFunction = function() {
+
+// };
+
+// ...
+//     $("button").click(myClickFunction());
+//     $("#fortytwo").click(myClickFunction());

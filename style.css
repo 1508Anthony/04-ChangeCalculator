@@ -28,6 +28,9 @@ input {
 .box {
 	border: 1px solid black;
 	width: 50%;
+	background-color: #CCCCCC;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .number {
