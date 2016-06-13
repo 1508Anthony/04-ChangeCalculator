@@ -6,7 +6,8 @@ $(function() {
 
 		// get the difference - in cents
 		// this is the change to be returned
-		var diff = 100 * (payment - cost);
+		// -- using Math.abs in case we get negative values or bad input
+		var diff = 100 * Math.abs(payment - cost);
 
 		// calculate the number of dollars and the change leftover
 		var dollars = Math.floor(diff / 100);
@@ -25,7 +26,7 @@ $(function() {
 		change = change % 5;
 
 		// and for pennies - it is whatever is left over
-		var pennies = change;
+		var pennies = Math.round(change); // round for floating point inaccuracy
 
 		// now set all the outputs
 		$("#dollars").text(dollars);
